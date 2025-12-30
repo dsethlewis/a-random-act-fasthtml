@@ -1,6 +1,6 @@
 from fasthtml.common import (
     fast_app, serve,
-    A, Card, Container, Group, P, Socials, Titled,
+    A, Card, Container, Group, P, Titled,
     picolink,
 )
 
@@ -15,11 +15,9 @@ def get():
         "popular foundations like ASGI and HTMX. You can now deploy FastHTML "
         "with Vercel CLI or by pushing new changes to your git repository.",
     )
+    ex_url = "https://vercel.com/templates/python/fasthtml-python-boilerplate"
     footer_content = P(
-        A(
-            "Deploy your own",
-            href="https://vercel.com/templates/python/fasthtml-python-boilerplate",
-        ),
+        A("Deploy your own", href=ex_url),
         " or ",
         A("learn more", href="https://docs.fastht.ml/"),
         " about FastHTML.",
@@ -33,6 +31,5 @@ def get():
             ),
         ),
     )
-
 
 serve()
